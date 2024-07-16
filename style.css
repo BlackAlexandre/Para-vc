@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    background-color: rgb(228, 135, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+main {
+    background-color: rgb(175, 37, 175);
+    width: 80vh;
+    height: 30vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+main p {
+    text-align: center;
+    font-size: 3vh;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Patrick Hand", cursive;
+}
+
+main div {
+    display: flex;
+    flex-direction: column; /* Alinha os botões em uma coluna */
+    align-items: center;    /* Centraliza os botões horizontalmente */
+}
+
+main button {
+    width: 60px;
+    height: 30px;
+    background-color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.2em; 
+    margin: 5px; /* Adiciona espaçamento entre os botões */
+}
+
+.sim {
+    background-color: rgb(15, 194, 15);
+}
+
+.nao{
+    background-color: red;
+}
+
+
+#m1 {
+    background-color: rgb(175, 37, 175);
+    width: 90vh;
+    height: 50vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+#m1 h1 {
+    text-align: center;
+    font-size: 3vh;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Patrick Hand", cursive;
+}
+
+#m1 div {
+    display: flex;
+    flex-direction: column; /* Alinha os botões em uma coluna */
+    align-items: center;    /* Centraliza os botões horizontalmente */
+}
+
+#m1 form{
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: "Patrick Hand", cursive;
+}
