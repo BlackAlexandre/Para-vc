@@ -4,64 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Corações e Flores</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-            background-color: #fce4ec;
-            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/12/10/background-1869286_960_720.jpg'); /* Imagem de fundo com flores */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            height: 100vh;
-        }
-        .heart, .flower, .text {
-            position: absolute;
-            font-size: 2em;
-            pointer-events: none;
-        }
-        .heart {
-            color: red;
-        }
-        .flower {
-            color: pink;
-        }
-        .text {
-            color: purple;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
 
+    <div class="special-message">
+        <div class="message-left">
+            <h1>Para a minha princesa Heloise!</h1>
+            <p>Estamos já no 9° mês de namoro e eu quero aproveitar este momento para te agradecer por tudo que você faz por mim. Você é incrível e eu sou muito grato por ter você na minha vida. 💖</p>
+        </div>
+        <div class="carrossel-container">
+            <div class="date-display">02/08/2023</div>
+            <div class="carrossel">
+                <div class="slides">
+                    <img src="imagens/1.jpeg" alt="Foto 1">
+                    <img src="imagens/2.jpeg" alt="Foto 2">
+                    <img src="imagens/3.jpeg" alt="Foto 3">
+                    <img src="imagens/4.jpeg" alt="Foto 4">
+                    <img src="imagens/5.jpeg" alt="Foto 5">
+                    <img src="imagens/6.jpeg" alt="Foto 6">
+                    <img src="imagens/7.jpeg" alt="Foto 7">
+                    <img src="imagens/8.jpeg" alt="Foto 8">
+                    <img src="imagens/9.jpeg" alt="Foto 9">
+                    <img src="imagens/10.jpeg" alt="Foto 10">
+                    <img src="imagens/11.jpeg" alt="Foto 11">
+                    <img src="imagens/12.jpeg" alt="Foto 12">
+                    <img src="imagens/13.jpeg" alt="Foto 13">
+                    <img src="imagens/14.jpeg" alt="Foto 14">
+                    <img src="imagens/15.jpeg" alt="Foto 15">
+                    <img src="imagens/16.jpeg" alt="Foto 16">
+                    <img src="imagens/17.jpeg" alt="Foto 17">
+                    <img src="imagens/18.jpeg" alt="Foto 18">
+                    <img src="imagens/19.jpeg" alt="Foto 19">
+                    <img src="imagens/20.jpeg" alt="Foto 20">
+                    <img src="imagens/21.jpeg" alt="Foto 21">
+                    <img src="imagens/22.jpeg" alt="Foto 22">
+                    <img src="imagens/23.jpeg" alt="Foto 23">
+                    <img src="imagens/24.jpeg" alt="Foto 24">
+                    <img src="imagens/25.jpeg" alt="Foto 25">
+                    <img src="imagens/26.jpeg" alt="Foto 26">
+                    <img src="imagens/27.jpeg" alt="Foto 27">
+                    <img src="imagens/28.jpeg" alt="Foto 28">
+                    <img src="imagens/29.jpeg" alt="Foto 29">
+                    <img src="imagens/30.jpeg" alt="Foto 30">
+                    <img src="imagens/31.jpeg" alt="Foto 31">
+                    
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="message-right">
+            <p>Eu te amo muito e estou ansioso para muitos mais meses e anos ao seu lado, sempre vou fazer de tudo para estar com ti, e para fazer com que vc se sinta o melhor possivel, eu te amo mt, mas mt, mt mesmo, meus melhores momentos são com vc, e por isso lhe entrego esse "album" de fotos nosso. 💕</p>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    <!-- Resto do conteúdo -->
     <script>
         function createElement(tag, className, content, style) {
             const element = document.createElement(tag);
@@ -69,29 +67,78 @@
             element.textContent = content;
             Object.assign(element.style, style);
             document.body.appendChild(element);
+            // Apply animation
+            const animationDuration = Math.random() * 5 + 5; // Random duration between 5s and 10s
+            element.style.animationDuration = `${animationDuration}s`;
         }
 
         function generateRandomPosition() {
             return {
-                top: Math.random() * 100 + 'vh',
-                left: Math.random() * 100 + 'vw'
+                top: Math.random() * -100 + 'vh', // Start above the viewport
+                left: Math.random() * 100 + 'vw'  // Random horizontal position
             };
         }
 
-        for (let i = 0; i < 50; i++) {
+        // Create hearts
+        for (let i = 0; i < 80; i++) {
             let { top, left } = generateRandomPosition();
-            createElement('div', 'heart', '❤️', { top, left, fontSize: '2em' });
+            createElement('div', 'heart', '❤️', { top, left, fontSize: '3em' });
         }
 
-        for (let i = 0; i < 50; i++) {
+        // Create flowers
+        for (let i = 0; i < 80; i++) {
             let { top, left } = generateRandomPosition();
-            createElement('div', 'flower', '🌸', { top, left, fontSize: '2em' });
+            createElement('div', 'flower', '🌸', { top, left, fontSize: '3em' });
         }
 
-        for (let i = 0; i < 50; i++) {
+        // Create text
+        for (let i = 0; i < 80; i++) {
             let { top, left } = generateRandomPosition();
             createElement('div', 'text', 'A+H', { top, left, fontSize: '2em' });
         }
     </script>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slides img').length;
+            
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentIndex + direction);
+        }
+
+        // Show the first slide initially
+        showSlide(currentIndex);
+
+        // Auto-slide every 3 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        window.addEventListener('wheel', function(event) {
+            if (event.deltaY > 0) {
+                changeSlide(-1); // Scroll down, move to next slide
+            } else {
+                changeSlide(1); // Scroll up, move to previous slide
+            }
+        });
+    </script>
+
+
+
 </body>
 </html>

@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9); /* Gradiente suave */
+}
+
+.heart, .flower, .text {
+    position: absolute;
+    font-size: 3em;
+    user-select: none;
+    pointer-events: none;
+    opacity: 1; /* Garantir que os elementos sejam visíveis */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.heart {
+    color: red;
+    animation: fall linear infinite;
+}
+
+.flower {
+    color: pink;
+    animation: fall linear infinite;
+}
+
+.text {
+    color: rgb(15, 7, 242);
+    animation: fall linear infinite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para a mensagem especial */
+.special-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(234, 181, 246, 0.8); /* Fundo branco quase transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garante que a mensagem fique acima dos outros elementos */
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.message-left, .message-right {
+    width: 25%;
+    padding: 20px;
+}
+
+.message-left {
+    text-align: right;
+    border-right: 1px solid #ccc;
+    font-size: 17px;
+}
+
+.message-right {
+    text-align: left;
+    border-left: 1px solid #ccc;
+    font-size: 17px;
+}
+
+.carrossel-container {
+    position: relative;
+    width: 80%;
+    height: 80vh; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.date-display {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.243); /* Fundo quase transparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: #333;
+    z-index: 10; /* Certifique-se de que a data esteja acima do carrossel */
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out; /* Transição suave */
+}
+
+
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
