@@ -41,17 +41,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const nomeCorreto = 'Heloise';
         const sobrenomeCorreto = 'Sophia';
         const idadeCorretaMinima = 15; // Deve ser um número
-        const nivelBelezaCorreto = '10';
+        const nivelBelezaCorreto = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
 
-        // Verifica se os campos correspondem às informações corretas
-        if (primeiroNome === nomeCorreto && segundoNome === sobrenomeCorreto && 
-            !isNaN(idade) && idade >= idadeCorretaMinima && 
-            nivelBeleza === nivelBelezaCorreto) {
+        // Função para exibir o segundo alerta
+        const mostrarSegundoAlerta = () => {
+            alert('Olha de novo, agora sim tá certo!');
+        };
+
+        // Verifica se o nível de beleza está incorreto
+        if (nivelBeleza !== nivelBelezaCorreto) {
+            // Exibe a mensagem de erro sobre o nível de beleza
+            alert('Só isso de beleza? Isso tá errado!!!');
+            
+            // Usando setTimeout para preencher o campo e mostrar o segundo alerta após o alerta inicial
+            setTimeout(() => {
+                document.getElementById('nivelBeleza').value = nivelBelezaCorreto;
+                mostrarSegundoAlerta();
+            }, 0);
+        } else if (primeiroNome !== nomeCorreto || segundoNome !== sobrenomeCorreto || isNaN(idade) || idade < idadeCorretaMinima) {
+            // Se outras informações estiverem incorretas, exibe mensagem genérica
+            alert('Informações incorretas. Verifique se os campos estão preenchidos corretamente.');
+        } else {
             // Se tudo estiver correto, redireciona para a página pag4.html
             window.location.href = 'pag4.html';
-        } else {
-            // Exibe uma mensagem de erro caso os dados estejam incorretos
-            alert('Informações incorretas. Verifique se os campos estão preenchidos corretamente.');
         }
     });
 });
+
+
+

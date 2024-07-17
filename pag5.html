@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Corações e Flores</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/12/10/background-1869286_960_720.jpg'); /* Imagem de fundo com flores */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+        }
+        .heart, .flower, .text {
+            position: absolute;
+            font-size: 2em;
+            pointer-events: none;
+        }
+        .heart {
+            color: red;
+        }
+        .flower {
+            color: pink;
+        }
+        .text {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script>
+        function createElement(tag, className, content, style) {
+            const element = document.createElement(tag);
+            element.className = className;
+            element.textContent = content;
+            Object.assign(element.style, style);
+            document.body.appendChild(element);
+        }
+
+        function generateRandomPosition() {
+            return {
+                top: Math.random() * 100 + 'vh',
+                left: Math.random() * 100 + 'vw'
+            };
+        }
+
+        for (let i = 0; i < 50; i++) {
+            let { top, left } = generateRandomPosition();
+            createElement('div', 'heart', '❤️', { top, left, fontSize: '2em' });
+        }
+
+        for (let i = 0; i < 50; i++) {
+            let { top, left } = generateRandomPosition();
+            createElement('div', 'flower', '🌸', { top, left, fontSize: '2em' });
+        }
+
+        for (let i = 0; i < 50; i++) {
+            let { top, left } = generateRandomPosition();
+            createElement('div', 'text', 'A+H', { top, left, fontSize: '2em' });
+        }
+    </script>
+</body>
+</html>

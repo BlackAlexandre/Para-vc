@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main id="m2">
+        <div>
+            <p>Brincadeira são só 2 páginas</p>
+            <p>Ainda não tô convencido que vc seja a Heloise, preencha seu nome completo:</p>
+
+            <form id="meuFormulario">
+                <label for="nomeC">Nome Completo:</label>
+                <input type="text" id="nomeC" name="nomeC" required> <br><br>
+
+                <label for="nomeNamorado">Nome do seu namorado:</label>
+                <input type="text" id="nomeNamorado" name="nomeNamorado" required><br><br>
+
+                <label for="idadeNamorado">Idade dele:</label>
+                <input type="number" id="idadeNamorado" name="idadeNamorado" min="0" required><br><br>
+
+                <label for="quer">Você quer mesmo abrir esse presente?</label>
+                <input type="text" id="quer" name="quer" required><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <!-- Incluindo o arquivo JavaScript -->
+    <script src="scriptt.js"></script> 
 </body>
 </html>

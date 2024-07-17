@@ -1,0 +1,102 @@
+
+html, body{
+
+    background-color: rgb(212, 129, 179);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    font-family: var(--font2);
+    padding-top: 50px;
+    font-variant: small-caps;
+
+    font-size: 7vw;
+}
+
+header > p{
+    padding-bottom: 50px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+section{
+    font-family: var(--font3);
+    font-size: 3.5vw;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+
+}
+
+#img01{
+    background-image: url("../pacote-d012/imagens/background001.jpg");
+
+    background-position: right center;
+
+    background-size: cover;
+}
+
+#img02{
+    background-image: url("../pacote-d012/imagens/background002.jpg");
+
+    background-position: right center;
+
+    background-size: cover;
+
+}
+
+section > p{
+    padding: 1.5em;
+}
+
+.normal{
+    background-color: white;
+    color: black;
+}
+
+.image{
+    background-color: rgb(20, 18, 18);
+    color: white;
+
+    text-shadow: 3px 2px 3px black;
+
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.807);
+
+    background-attachment: fixed;
+
+
+}
+
+.image > p{
+    background-color: rgba(0, 0, 0, 0.702);
+    display: inline-block;
+    padding: 5p;
+
+    box-shadow: 2px 2px 3px black;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-family: var(--font4);
+    font-size: 20px;
+
+    letter-spacing: 5px;
+}
